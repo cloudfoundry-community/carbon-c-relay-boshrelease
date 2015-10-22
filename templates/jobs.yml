@@ -16,18 +16,11 @@ jobs:
     networks: (( merge ))
     persistent_disk: 0
     properties: {}
-  - name: carbon_c_relay_z1
-    template: carbon-c-relay
-    instances: 0
-    resource_pool: small_z1
-    networks: (( merge ))
-    persistent_disk: 0
-    update:
-      canaries: 10
-    properties:
-      carbon_c_relay:
-        leader_address: (( merge ))
 
 networks: (( merge ))
 
-properties: {}
+properties:
+  carbon-c-relay:
+    config: |
+     cluster 220net forward 10.9.2.197:2003 proto tcp;
+     match ^simon\. send to 220net stop;

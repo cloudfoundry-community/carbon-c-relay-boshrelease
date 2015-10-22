@@ -17,14 +17,6 @@ jobs:
     networks:
       - name: carbon_c_relay1
         static_ips: (( static_ips(0) ))
-  - name: carbon_c_relay_z1
-    instances: 2
-    networks:
-      - name: carbon_c_relay1
-        static_ips: ~
-    properties:
-      carbon_c_relay:
-        leader_address: (( jobs.carbon_c_relay_leader_z1.networks.carbon_c_relay1.static_ips.[0] ))
 
 compilation:
   cloud_properties:
@@ -47,25 +39,6 @@ networks:
     - 10.244.2.1
     static:
     - 10.244.2.2
-
-  - cloud_properties:
-      name: random
-    range: 10.244.2.4/30
-    reserved:
-    - 10.244.2.5
-    static: []
-  - cloud_properties:
-      name: random
-    range: 10.244.2.8/30
-    reserved:
-    - 10.244.2.9
-    static: []
-  - cloud_properties:
-      name: random
-    range: 10.244.2.12/30
-    reserved:
-    - 10.244.2.13
-    static: []
   - cloud_properties:
       name: random
     range: 10.244.2.16/30
