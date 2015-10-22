@@ -1,13 +1,34 @@
 ---
 name: carbon-c-relay
-packages: []
+packages:
+- carbon-c-relay
 templates:
+  bin/carbon-c-relay_ctl: bin/carbon-c-relay_ctl
   bin/monit_debugger: bin/monit_debugger
-  bin/carbon_c_relay_ctl: bin/carbon_c_relay_ctl
-  config/carbon_c_relay.conf.erb: config/carbon_c_relay.conf
   data/properties.sh.erb: data/properties.sh
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
+  config/carbon-c-relay.conf: config/carbon-c-relay.conf
+
 properties:
-  carbon_c_relay.leader_address:
-    description: Hostname/IP to the leader/master of the cluster
+  carbon-c-relay.port:
+    description: listen on port for connections
+    default: 2003
+  carbon-c-relay.workers:
+    description: number of worker threads
+    default: 4
+  carbon-c-relay.batch_size:
+    description: server send batch size
+    default: 2500
+  carbon-c-relay.queue_size:
+    description: server queue size
+    default: 25000
+  carbon-c-relay.stats_interval:
+    description: statistics sending interval in seconds
+    default: 60
+  carbon-c-relay.allowed_chars:
+    description: characters to allow next to [A-Za-z0-9]
+    default: "-_:#"
+  carbon-c-relay.config:
+   description: Config string
+   default: ""
