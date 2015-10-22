@@ -1,0 +1,12 @@
+# Available variables
+# $BOSH_COMPILE_TARGET - where this package & spec'd source files are available
+# $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
+
+cd $BOSH_COMPILE_TARGET/carbon-c-relay/
+tar xf carbon-c-relay-0.44.tar
+cd carbon-c-relay-0.44
+make
+cp relay $BOSH_INSTALL_TARGET
+
+
+
