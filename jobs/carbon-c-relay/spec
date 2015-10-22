@@ -1,0 +1,13 @@
+---
+name: carbon-c-relay
+packages: []
+templates:
+  bin/monit_debugger: bin/monit_debugger
+  bin/carbon_c_relay_ctl: bin/carbon_c_relay_ctl
+  config/carbon_c_relay.conf.erb: config/carbon_c_relay.conf
+  data/properties.sh.erb: data/properties.sh
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+properties:
+  carbon_c_relay.leader_address:
+    description: Hostname/IP to the leader/master of the cluster

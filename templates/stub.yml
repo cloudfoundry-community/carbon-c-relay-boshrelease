@@ -1,0 +1,14 @@
+---
+meta:
+  environment: NAME
+  dns_root: microbosh
+  security_groups:
+    - carbon_c_relay
+  stemcell:
+    name: STEMCELL
+
+director_uuid: PLACEHOLDER-DIRECTOR-UUID
+
+releases:
+  - name: carbon-c-relay
+    version: latest
