@@ -24,7 +24,7 @@ case $1 in
     <% end %>
 
     exec chpst -u vcap:vcap /var/vcap/jobs/carbon-c-relay/packages/carbon-c-relay/relay \
-         -f /var/vcap/jobs/carbon-c-relay/config/carbon-c-relay.conf
+         -f /var/vcap/jobs/carbon-c-relay/config/carbon-c-relay.conf \
          -p <%= p("carbon_c_relay.port") %> \
          -w <%= p("carbon_c_relay.workers") %> \
          -b <%= p("carbon_c_relay.batch_size") %> \
