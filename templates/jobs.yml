@@ -20,7 +20,7 @@ jobs:
 networks: (( merge ))
 
 properties:
-  carbon-c-relay:
+  carbon_c_relay:
     config: |
      cluster 220net forward 10.9.2.197:2003 proto tcp;
      match ^simon\. send to 220net stop;
