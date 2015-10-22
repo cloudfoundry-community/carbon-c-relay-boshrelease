@@ -1,0 +1,16 @@
+---
+packages:
+- name: carbon-c-relay
+  version: 9dae6055f078f13afd4ea57af8408d8428d2a8f2
+  fingerprint: 9dae6055f078f13afd4ea57af8408d8428d2a8f2
+  sha1: 7f594751b0ee3f70d129fd421e9f2f870e1f2a8f
+  dependencies: []
+jobs:
+- name: carbon-c-relay
+  version: b873958a408f8d91e72a350864abdff1cde7a442
+  fingerprint: b873958a408f8d91e72a350864abdff1cde7a442
+  sha1: d9da3d1760be86c5c181e6603ceb7680d92103e3
+commit_hash: b26e9c17
+uncommitted_changes: true
+name: carbon-c-relay
+version: '1'
